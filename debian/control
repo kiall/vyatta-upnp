@@ -1,0 +1,15 @@
+Source: vyatta-upnp
+Section: contrib/net
+Priority: extra
+Maintainer: Kiall Mac Innes <kiall@managedit.ie>
+Build-Depends: debhelper (>= 5), autotools-dev
+Standards-Version: 3.7.2
+
+Package: vyatta-upnp
+Architecture: all
+Depends: linux-igd (>= 1.0+cvs20070630-2),
+ vyatta-cfg (>= 0.15.33),
+ vyatta-bash | bash (>= 3.1)
+Description: Vyatta UPNP configuration templates and scripts
+ Vyatta UPNP configuration templates and scripts.
+
