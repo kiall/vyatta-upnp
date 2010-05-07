@@ -38,15 +38,10 @@ my $config = new Vyatta::Config;
 my ($setup, $update, $stop, $inbound_interface);
 
 GetOptions(
-    "setup!"    => \$setup,
     "update!"   => \$update,
     "stop!"     => \$stop,
     "dev=s"     => \$inbound_interface,
 );
-
-if ($setup) {
-	exit 0;
-}
 
 if ($update) {
 	my $outbound_interface = $config->returnValue("service upnp listen-on $inbound_interface outbound-interface");	

@@ -2,7 +2,6 @@ multi:
 type: txt
 help: Set local interface [REQUIRED]
 allowed: /opt/vyatta/sbin/vyatta-interfaces.pl --show=all
-create: sudo /opt/vyatta/sbin/upnp-interface-config.pl --setup --dev=$VAR(@);
 end: if [ ${COMMIT_ACTION} = 'DELETE' ]; then
          sudo /opt/vyatta/sbin/upnp-interface-config.pl --stop --dev=$VAR(@); 
      else
